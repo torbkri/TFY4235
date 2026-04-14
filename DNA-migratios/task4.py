@@ -1,7 +1,9 @@
 import random
+from numba import njit
 import numpy as np
 import matplotlib.pyplot as plt
 
+@njit
 def gaussian_random() -> float:
     return random.gauss(0.0, 1.0)
 
