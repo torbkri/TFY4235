@@ -1,5 +1,3 @@
-import numpy as np
-import matplotlib.pyplot as plt
 
 def flashing(t_hat: float, tau_hat: float) -> float:
     phase = t_hat % tau_hat
