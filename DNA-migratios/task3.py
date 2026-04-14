@@ -1,11 +1,14 @@
+
 import matplotlib.pyplot as plt
 import numpy as np
+
 
 def flashing(t_hat: float, tau_hat: float) -> float:
     phase = t_hat % tau_hat
     if phase < 0.75 * tau_hat:
         return 0.0
     return 1.0
+
 
 def ratchet_potential(x_hat: float, alpha: float) -> float:
     x_cell = x_hat % 1.0
@@ -15,11 +18,13 @@ def ratchet_potential(x_hat: float, alpha: float) -> float:
     else:
         return (1.0 - x_cell) / (1.0 - alpha)
 
-def potential(x_hat: float, t_hat: float, alpha: float, tau_hat: float) -> float:
-    return ratchet_potential(x_hat, alpha) * flashing(t_hat, tau_hat)
+def potential(x_hat: float, t_hat: float, alpha: float, tau_hat: float, flashing_on:bool = True) -> float:
+    if flashing_on:
+        return ratchet_potential(x_hat, alpha) * flashing(t_hat, tau_hat)
+    return ratchet_potential(x_hat, alpha)
 
-def dU_dx(x_hat: float, t_hat: float, alpha: float, tau_hat: float) -> float:
-    if flashing(t_hat, tau_hat) == 0.0:
+def dU_dx(x_hat: float, t_hat: float, alpha: float, tau_hat: float, flashing_on: bool = True) -> float:
+    if not flashing_on or not flashing(t_hat, tau_hat):
         return 0.0
 
     x_cell = x_hat % 1.0
@@ -36,7 +41,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_potential_and_force(alpha: float, tau_hat: float, t_hat: float)-> None:
-    x = np.linspace(0, tau_hat, 1000)
+    x = np.linspace(0, 1, 1000)
     U = [potential(xi, t_hat, alpha, tau_hat) for xi in x]
     dU = [dU_dx(xi, t_hat, alpha, tau_hat) for xi in x]
 

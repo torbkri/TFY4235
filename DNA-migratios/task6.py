@@ -1,6 +1,9 @@
-from task3 import dU_dx,potential
+
+import numpy as np
+from task3 import dU_dx, flashing,potential
 from task4 import gaussian_random
 from task5 import euler_step
+
 
 def max_abs_dU_dx(alpha):
     return max(1.0 / alpha, 1.0 / (1.0 - alpha))
@@ -17,22 +20,22 @@ def check_timestep(dt_hat, D_hat, alpha, safety_factor=0.1):
     return ok, lhs, rhs
 
 
-def run_simulation(x0_hat, t_end_hat, params, rng=gaussian_random):
+def run_simulation(x0_hat: float, t_end_hat: float, params, rng:callable =gaussian_random, flashing_on: bool=True)-> dict[str, list[float]]:
     check_timestep(params.dt, params.D, params.alpha)
 
     n_steps = int(t_end_hat / params.dt)
 
     t_values = [0.0]
     x_values = [x0_hat]
-    u_values = [potential(x0_hat, 0.0, params.alpha, params.tau)]
+    u_values = [potential(x0_hat, 0.0, params.alpha, params.tau, flashing_on)]
 
     x_hat = x0_hat
     t_hat = 0.0
 
     for _ in range(n_steps):
-        x_hat, t_hat = euler_step(x_hat, t_hat, params, rng)
+        x_hat, t_hat = euler_step(x_hat, t_hat, params, rng, flashing_on)
         t_values.append(t_hat)
         x_values.append(x_hat)
-        u_values.append(potential(x_hat, t_hat, params.alpha, params.tau))
+        u_values.append(potential(x_hat, t_hat, params.alpha, params.tau, flashing_on))
 
-    return t_values, x_values, u_values
+    return {"t": t_values, "x": x_values, "u": u_values}
