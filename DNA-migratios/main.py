@@ -16,10 +16,14 @@ def main() -> None:
     # plot_trajectory(run_data_10)
 
     params = Params(alpha=0.2, D= 10, tau=200, dt=1E-5)
-    run_data_01 = run_simulation(x0_hat=0.0, t_end_hat=params.tau, params=params, flashing_on=False)
-    plot_trajectory(run_data_01)
+    
+    for i in range(5):
+        run_data_10 = run_simulation(x0_hat=0.0, t_end_hat=params.tau, params=params, flashing_on=True)
+        plot_trajectory(run_data_10)
+    # run_data_01 = run_simulation(x0_hat=0.0, t_end_hat=params.tau, params=params, flashing_on=True)
+    # plot_trajectory(run_data_01)
 
-    plot_energy_distribution(run_data_01, params.D)
+    # plot_energy_distribution(run_data_01, params.D)
 
     # plot_compare(run_data_10=run_data_10, run_data_01=run_data_01)
 
