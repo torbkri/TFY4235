@@ -1,5 +1,6 @@
 import math
 import matplotlib.pyplot as plt
+from numba import njit
 
 from Params import Params
 from task3 import dU_dx
@@ -7,7 +8,7 @@ from task4 import gaussian_random
 
 
 def euler_step(x_hat: float, t_hat: float, params: Params, rng: callable = gaussian_random, flashing_on: bool = True) -> tuple[float, float]:
-    drift = -dU_dx(x_hat, t_hat, params.alpha, params.tau, flashing_on) * params.dt
+    drift = -dU_dx(x_hat, t_hat, params.alpha, params.tau, flashing_on) * params.dt #reduced units, so no gamma necessary
     noise = math.sqrt(2.0 * params.D * params.dt) * rng()
     x_next = x_hat + drift + noise
     t_next = t_hat + params.dt

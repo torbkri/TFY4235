@@ -1,29 +1,35 @@
 
 import numpy as np
+from numba import njit
 from task3 import dU_dx, flashing,potential
 from task4 import gaussian_random
 from task5 import euler_step
 
-
-def max_abs_dU_dx(alpha):
+@njit
+def max_abs_dU_dx(alpha: float) -> float:
     return max(1.0 / alpha, 1.0 / (1.0 - alpha))
 
-def timestep_indicator(dt_hat, D_hat, alpha):
+@njit
+def timestep_indicator(dt_hat: float, D_hat: float, alpha: float) -> float:
     deterministic = max_abs_dU_dx(alpha) * dt_hat
     stochastic = 4.0 * (2.0 * D_hat * dt_hat) ** 0.5
     return deterministic + stochastic
 
-def check_timestep(dt_hat, D_hat, alpha, safety_factor=0.1):
+@njit
+def check_timestep(dt_hat: float, D_hat: float, alpha: float, safety_factor: float=0.1) -> tuple[bool, float, float]:
     lhs = timestep_indicator(dt_hat, D_hat, alpha)
     rhs = safety_factor * alpha
     ok = lhs < rhs
     return ok, lhs, rhs
 
 
-def run_simulation(x0_hat: float, t_end_hat: float, params, rng:callable =gaussian_random, flashing_on: bool=True)-> dict[str, list[float]]:
-    check_timestep(params.dt, params.D, params.alpha)
+def run_simulation(x0_hat: float, t_end_hat: float, params, rng:callable =gaussian_random, flashing_on: bool=True) -> tuple([dict[str, list[float]], np.ndarray]):
+    if not check_timestep(params.dt, params.D, params.alpha)[0]:
+        raise ValueError("Timestep too large for stability. Reduce dt or increase safety_factor.")
 
-    n_steps = int(t_end_hat / params.dt)
+    particles = np.zeros(params.particles)
+
+    n_steps =  params.periods * int(t_end_hat / params.dt)
 
     t_values = [0.0]
     x_values = [x0_hat]
@@ -38,4 +44,11 @@ def run_simulation(x0_hat: float, t_end_hat: float, params, rng:callable =gaussi
         x_values.append(x_hat)
         u_values.append(potential(x_hat, t_hat, params.alpha, params.tau, flashing_on))
 
-    return {"t": t_values, "x": x_values, "u": u_values}
+    for i in range(params.particles):
+        x_hat = x0_hat
+        t_hat = 0.0
+        for _ in range(n_steps):
+            x_hat, t_hat = euler_step(x_hat, t_hat, params, rng, flashing_on)
+        particles[i] = x_hat
+
+    return {"t": t_values, "x": x_values, "u": u_values}, particles
