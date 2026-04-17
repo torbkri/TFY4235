@@ -1,0 +1,5 @@
+Task 8.
+I believe that with flashing turned on the particles will drift only if the energy is low enough that they can not easily overcome the potential barrier while potential is on.
+
+Task 9.
+For low T we see that the particle is not able to move past the peak a lot of the times, so the movement is limited. For very large T the particle is able to move backwards, so we must find a T where it has time to move past the barriere but not back past the last one.
