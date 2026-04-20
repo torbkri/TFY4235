@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+
+% Importing document settings from our file "packages.sty"
+\usepackage{packages}
+
+% Beginning of document
+\begin{document}
+
+% Inserting title page
+\import{./}{title}
+\noindent\rule{\linewidth}{0.5pt}
+\vspace{-0.1\linewidth}
+% Introduction explaining this LaTeX-template
+\import{./Sections/}{Abstract}
+\newline
+\noindent\rule{\linewidth}{0.5pt}
+\begin{multicols}{2}
+\import{./Sections/}{Introduction}
+\import{./Sections/}{Method}
+\import{./Sections/}{Results}
+\import{./Sections/}{Discussion}
+\import{./Sections/}{Conclusion}
+\import{./Sections/}{Acknowledgements}
+\import{./Sections/}{Author Contributions}
+\import{./Sections/}{AI declaration}
+
+
+% Printing bibliography
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{multicols}
+% End of document
+\end{document}
