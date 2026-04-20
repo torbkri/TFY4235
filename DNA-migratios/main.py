@@ -10,7 +10,6 @@ from task7 import plot_energy_distribution, boltzmann_density_reduced
 from task9 import mean_drift_velocity, plot_drift_velocity_vs_flashing_time
 
 
-
 def main() -> None:
     print(time.ctime())
     params = Params(alpha=0.2, D= 3.25E-3, tau=7, dt=1E-4, periods=100, particles = 1)
@@ -24,8 +23,8 @@ def main() -> None:
     # plot_energy_distribution(run_data_01, params.D, bins= 100, burn_in_fraction=0.4)
 
 
-    flashing = np.linspace(0.3, 15, 100)
-    plot_drift_velocity_vs_flashing_time(flashing)
+    flashing_times = np.linspace(0.3, 15, 15)
+    plot_drift_velocity_vs_flashing_time(flashing_times)
 
 
     # plot_trajectory(run_data_01[0])
