@@ -16,7 +16,7 @@ def euler_step(x_hat: float, t_hat: float, params: Params, rng: callable = gauss
 
 def plot_trajectory(run_data):
     plt.figure()
-    plt.plot(run_data["t"], run_data["x"])
+    plt.plot(run_data[0]["t"], run_data[0]["x"])
     plt.xlabel("t̂")
     plt.ylabel("x̂(t̂)")
     plt.tight_layout()
@@ -24,7 +24,7 @@ def plot_trajectory(run_data):
 
 def plot_energies(run_data):
     plt.figure()
-    plt.plot(run_data["t"], run_data["u"])
+    plt.plot(run_data[0]["t"], run_data[0]["u"])
     plt.xlabel("t̂")
     plt.ylabel("Û(t̂)")
     plt.tight_layout()
