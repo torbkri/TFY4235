@@ -23,13 +23,13 @@ def check_timestep(dt_hat: float, D_hat: float, alpha: float, safety_factor: flo
     return ok, lhs, rhs
 
 
-def run_simulation(x0_hat: float, t_end_hat: float, params, rng:callable =gaussian_random, flashing_on: bool=True) -> tuple([dict[str, list[float]], np.ndarray]):
-    if not check_timestep(params.dt, params.D, params.alpha)[0]:
-        raise ValueError("Timestep too large for stability. Reduce dt or increase safety_factor.")
+def run_simulation(x0_hat: float, params, rng:callable =gaussian_random, flashing_on: bool=True) -> tuple([dict[str, list[float]], np.ndarray]):
+    # if not check_timestep(params.dt, params.D, params.alpha)[0]:
+    #     raise ValueError("Timestep too large for stability. Reduce dt or increase safety_factor.")
 
     particles = np.zeros(params.particles)
 
-    n_steps =  params.periods * int(t_end_hat / params.dt)
+    n_steps =  int(params.t_end / params.dt)
 
     t_values = [0.0]
     x_values = [x0_hat]

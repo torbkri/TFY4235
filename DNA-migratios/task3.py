@@ -1,6 +1,15 @@
 from numba import njit
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib
+
+matplotlib.use("pgf")
+matplotlib.rcParams.update({
+    "pgf.texsystem": "pdflatex",
+    'font.family': 'serif',
+    'text.usetex': True,
+    'pgf.rcfonts': False,
+})
 
 @njit
 def flashing(t_hat: float, tau_hat: float) -> float:
@@ -38,22 +47,21 @@ def dU_dx(x_hat: float, t_hat: float, alpha: float, tau_hat: float, flashing_on:
     
 @njit
 def force(x_hat: float, t_hat: float, alpha: float, tau_hat: float) -> float:
-    return -dU_dx(x_hat, t_hat, alpha, tau_hat)
+    return -dU_dx(x_hat, t_hat, alpha, tau_hat, flashing_on = False)
 
 
 def plot_potential_and_force(alpha: float, tau_hat: float, t_hat: float)-> None:
-    x = np.linspace(0, 1, 1000)
-    U = [potential(xi, t_hat, alpha, tau_hat) for xi in x]
-    dU = [dU_dx(xi, t_hat, alpha, tau_hat) for xi in x]
+    x = np.linspace(0, 3, 1000)
+    U = [ratchet_potential(xi, alpha) for xi in x]
+    Force = [force(xi, tau_hat=tau_hat, alpha=alpha, t_hat=t_hat) for xi in x]
 
     fig, ax = plt.subplots(2, 1, sharex=True)
-    ax[0].plot(x, U, label="Û(x̂,t̂)")
-    ax[0].set_ylabel("Û")
+    ax[0].plot(x, U, label="$\hat{U}(\hat{x},\hat{t})$")
+    ax[0].set_ylabel("$\hat{U}$")
     ax[0].legend()
-    ax[1].plot(x, dU, label="∂Û/∂x̂", color="orange")
-    ax[1].set_xlabel("x̂")
-    ax[1].set_ylabel("∂Û/∂x̂")
-    ax[1].legend()
+    ax[1].plot(x, Force, label="$\partial\hat{U}\partial \hat{x}$", color="orange")
+    ax[1].set_xlabel("$\hat{x}$")
+    ax[1].set_ylabel("$\partial\hat{U}\partial \hat{x}$")
+    ax[1].legend(loc=1)
     fig.tight_layout()
-    plt.show()
-
+    fig.savefig("/Users/torbjornkringeland/Desktop/NTNU/6/TFY4235/DNA-migratios/DNA-report/Images/potential_and_force.pgf")

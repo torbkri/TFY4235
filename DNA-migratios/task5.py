@@ -1,6 +1,14 @@
 import math
 import matplotlib.pyplot as plt
 from numba import njit
+import matplotlib
+matplotlib.use("pgf")
+matplotlib.rcParams.update({
+    "pgf.texsystem": "pdflatex",
+    'font.family': 'serif',
+    'text.usetex': True,
+    'pgf.rcfonts': False,
+})
 
 from Params import Params
 from task3 import dU_dx
@@ -16,17 +24,24 @@ def euler_step(x_hat: float, t_hat: float, params: Params, rng: callable = gauss
 
 def plot_trajectory(run_data):
     plt.figure()
+    param = Params(tau=10)
+    print(run_data[0]["x"][200:210])
+    for i in range(len(run_data)):
+        run_data[0]["t"][i] = run_data[0]["t"][i]/param.omega
+        run_data[0]["x"][i] = run_data[0]["x"][i] * 1E6 * param.L
+    print(run_data[0]["x"][200:210])
     plt.plot(run_data[0]["t"], run_data[0]["x"])
-    plt.xlabel("t̂")
-    plt.ylabel("x̂(t̂)")
+    plt.xlabel("$t (s)$",fontsize=24)
+    plt.ylabel("$x (\mu m)$", fontsize=24)
+    plt.yticks([-40,-20,0,20,40,60])
     plt.tight_layout()
-    plt.show()
+    plt.savefig("/Users/torbjornkringeland/Desktop/NTNU/6/TFY4235/DNA-migratios/DNA-report/Images/Single_particle_flashing_on.pgf")
 
 def plot_energies(run_data):
     plt.figure()
     plt.plot(run_data[0]["t"], run_data[0]["u"])
     plt.xlabel("t̂")
-    plt.ylabel("Û(t̂)")
+    plt.ylabel("$\hat{u}(\hat{t})$")
     plt.tight_layout()
     plt.show()
 
