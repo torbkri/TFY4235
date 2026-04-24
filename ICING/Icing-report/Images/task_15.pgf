@@ -1,0 +1,279 @@
+%% Creator: Matplotlib, PGF backend
+%%
+%% To include the figure in your LaTeX document, write
+%%   \input{<filename>.pgf}
+%%
+%% Make sure the required packages are loaded in your preamble
+%%   \usepackage{pgf}
+%%
+%% Also ensure that all the required font packages are loaded; for instance,
+%% the lmodern package is sometimes necessary when using math font.
+%%   \usepackage{lmodern}
+%%
+%% Figures using additional raster images can only be included by \input if
+%% they are in the same directory as the main LaTeX file. For loading figures
+%% from other directories you can use the `import` package
+%%   \usepackage{import}
+%%
+%% and then include the figures with
+%%   \import{<path to file>}{<filename>.pgf}
+%%
+%% Matplotlib used the following preamble
+%%   \def\mathdefault#1{#1}
+%%   \everymath=\expandafter{\the\everymath\displaystyle}
+%%   \IfFileExists{scrextend.sty}{
+%%     \usepackage[fontsize=10.000000pt]{scrextend}
+%%   }{
+%%     \renewcommand{\normalsize}{\fontsize{10.000000}{12.000000}\selectfont}
+%%     \normalsize
+%%   }
+%%   
+%%   \makeatletter\@ifpackageloaded{underscore}{}{\usepackage[strings]{underscore}}\makeatother
+%%
+\begingroup%
+\makeatletter%
+\begin{pgfpicture}%
+\pgfpathrectangle{\pgfpointorigin}{\pgfqpoint{15.000000in}{5.000000in}}%
+\pgfusepath{use as bounding box, clip}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.000000pt}%
+\definecolor{currentstroke}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{15.000000in}{0.000000in}}%
+\pgfpathlineto{\pgfqpoint{15.000000in}{5.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{5.000000in}}%
+\pgfpathlineto{\pgfqpoint{0.000000in}{0.000000in}}%
+\pgfpathclose%
+\pgfusepath{fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.000000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetstrokeopacity{0.000000}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.267662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{4.832338in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{4.832338in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{0.267662in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{0.267662in}{0.285325in}}%
+\pgfpathclose%
+\pgfusepath{fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{0.267662in}{0.285325in}}{\pgfqpoint{4.564675in}{4.564675in}}%
+\pgfusepath{clip}%
+\pgfsys@transformcm{4.564675}{0.000000}{0.000000}{4.564675}{0.267662in}{0.285325in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=false,width=1.000000in,height=1.000000in]{/Users/torbjornkringeland/Desktop/NTNU/6/TFY4235/ICING/Icing-report/Images/task_15-img0.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=2.550000in,y=0.229769in,,top]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}p = 0.01}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.267662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{0.267662in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{4.832338in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{4.832338in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.267662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{4.832338in}{0.285325in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{0.267662in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{4.832338in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.000000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetstrokeopacity{0.000000}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{5.217662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{9.782338in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{9.782338in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{5.217662in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{5.217662in}{0.285325in}}%
+\pgfpathclose%
+\pgfusepath{fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{5.217662in}{0.285325in}}{\pgfqpoint{4.564675in}{4.564675in}}%
+\pgfusepath{clip}%
+\pgfsys@transformcm{4.564675}{0.000000}{0.000000}{4.564675}{5.217662in}{0.285325in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=false,width=1.000000in,height=1.000000in]{/Users/torbjornkringeland/Desktop/NTNU/6/TFY4235/ICING/Icing-report/Images/task_15-img1.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=7.500000in,y=0.229769in,,top]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}p = 0.1}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{5.217662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{5.217662in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{9.782338in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{9.782338in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{5.217662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{9.782338in}{0.285325in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{5.217662in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{9.782338in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetbuttcap%
+\pgfsetmiterjoin%
+\definecolor{currentfill}{rgb}{1.000000,1.000000,1.000000}%
+\pgfsetfillcolor{currentfill}%
+\pgfsetlinewidth{0.000000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetstrokeopacity{0.000000}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{10.167662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{14.732338in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{14.732338in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{10.167662in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{10.167662in}{0.285325in}}%
+\pgfpathclose%
+\pgfusepath{fill}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfpathrectangle{\pgfqpoint{10.167662in}{0.285325in}}{\pgfqpoint{4.564675in}{4.564675in}}%
+\pgfusepath{clip}%
+\pgfsys@transformcm{4.564675}{0.000000}{0.000000}{4.564675}{10.167662in}{0.285325in}%
+\pgftext[left,bottom]{\includegraphics[interpolate=false,width=1.000000in,height=1.000000in]{/Users/torbjornkringeland/Desktop/NTNU/6/TFY4235/ICING/Icing-report/Images/task_15-img2.png}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{textcolor}%
+\pgfsetfillcolor{textcolor}%
+\pgftext[x=12.450000in,y=0.229769in,,top]{\color{textcolor}{\rmfamily\fontsize{24.000000}{28.800000}\selectfont\catcode`\^=\active\def^{\ifmmode\sp\else\^{}\fi}\catcode`\%=\active\def%{\%}p = 0.2}}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{10.167662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{10.167662in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{14.732338in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{14.732338in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{10.167662in}{0.285325in}}%
+\pgfpathlineto{\pgfqpoint{14.732338in}{0.285325in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\begin{pgfscope}%
+\pgfsetrectcap%
+\pgfsetmiterjoin%
+\pgfsetlinewidth{0.803000pt}%
+\definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
+\pgfsetstrokecolor{currentstroke}%
+\pgfsetdash{}{0pt}%
+\pgfpathmoveto{\pgfqpoint{10.167662in}{4.850000in}}%
+\pgfpathlineto{\pgfqpoint{14.732338in}{4.850000in}}%
+\pgfusepath{stroke}%
+\end{pgfscope}%
+\end{pgfpicture}%
+\makeatother%
+\endgroup%
